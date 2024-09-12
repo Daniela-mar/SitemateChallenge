@@ -1,0 +1,23 @@
+<div>
+    <h1>Issue Tracker</h1>
+  
+    <!-- Create -->
+    <button (click)="createIssue()">Create Issue</button>
+  
+    <!-- Read All -->
+    <button (click)="getIssues()">Get All Issues</button>
+  
+    <!-- Read by ID -->
+    <button (click)="getIssueById(1)">Get Issue with ID 1</button>
+  
+    <!-- Update -->
+    <button (click)="updateIssue()">Update Issue with ID 1</button>
+  
+    <!-- Delete -->
+    <button (click)="deleteIssue(1)">Delete Issue with ID 1</button>
+  
+    <!-- Display all issues -->
+    <div *ngIf="issues.length">
+      <h3>All Issues:</h3>
+      <ul>
+        <li *ngFor="let issue of issues">
